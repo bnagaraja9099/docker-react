@@ -1,5 +1,5 @@
 # Specify a base image for builder process
-FROM node:alpine as builder
+FROM node:alpine
 
 WORKDIR '/app'
 
