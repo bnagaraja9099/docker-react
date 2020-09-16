@@ -7,7 +7,7 @@ before_install:
 script:
   - docker run -e CI=true bnagaraja9099/docker-react npm run test
 after_success:
-    - docker build -t bnagaraja9099/frontend
+    - docker build -t bnagaraja9099/frontend .
     # Login to Docker Cli
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
